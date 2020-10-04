@@ -1,6 +1,6 @@
-*{
-  margin:0;
-  padding:0;
+* {
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
 }
 
@@ -8,21 +8,75 @@ body {
   font-family: 'Courier New', Courier, monospace;
 }
 
-.app{
+.app {
   background-image: url(./images/cold-bg.jpg);
-  background-size:cover;
+  background-size: cover;
   background-position: bottom;
   transition: 0.35 ease-out;
 }
-.app.warm{
+
+.app.warm {
   background-image: url(./images/warm-bg.jpg);
 }
 
-main{
+main {
   min-height: 100vh;
-  background-image: linear-gradient;
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.75));
+  padding: 25px;
 }
 
-.app.warm{
-  background-image: url(./images/warm-bg.jpg);
+.search-box {
+  width: 100%;
+  margin: 0 0 75px;
+}
+
+
+.search-box .search-bar {
+  display: block;
+  width: 100px;
+  padding: 10px;
+  /* Removes default search bar styling */
+  appearance: none;
+  background: none;
+  border: none;
+  outline: none;
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 0px 0px 15px 15px;
+  margin-top: -25px;
+  box-shadow: 0px 5px rgba(0, 0, 0, 0.2);
+
+  font-size: 15px;  
+  transition: 0.35s ease;
+  columns: #313131;
+}
+
+.search-box .search-bar :focus {
+  background-color: rgba(255, 255, 255, 0.75);
+
+}
+
+.location-box .location{
+  color: #fff;
+  font-size: 30px;
+  font-weight: 400;
+  text-align: center;
+  text-shadow: 3px 3px rgba(50,50,50,0.5);
+
+}
+
+.location-box .date{
+  color: #fff;
+  font-size: 20px;
+  font-weight: 300;
+  font-style: italic;
+  text-align: center;
+}
+
+.weather-box{
+  text-align: center;
+}
+
+.weather-box .temp {
+  position:relative;
+  padding: 15px 25px;
 }
